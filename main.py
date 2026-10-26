@@ -7,6 +7,9 @@ url = os.getenv("DATABASE_URL")
 ahora = datetime.now(timezone.utc)
 
 personajes = [
+    ("Zara Kestrel", "Alive", "Human", "", "Female", "Valencia", "Hangar 7", None, None, ahora),
+    ("Xul'Thar", "Alive", "Alien", "", "Genderless", "Nebula K-9", "Orbital Port", None, None, ahora),
+    ("Unit R-17", "Alive", "Robot", "", "unknown", "Factory 3", "Workshop Delta", None, None, ahora),
     ("Bram Oakhollow", "Alive", "Human", "", "Male", "Bilbao", "Workshop Delta", None, None, ahora),
     ("Lia Moreau", "Unknown", "Human", "", "Female", "Marseille", "Orbital Port", None, None, ahora),
     ("Tobias Quell", "Dead", "Human", "", "Male", "Zurich", "Lab 42", None, None, ahora),
@@ -43,7 +46,7 @@ def cargar_personajes():
             }
             for row in rows
         ]
-    
+
 
     except Exception as e:
         print("Error:", e)
